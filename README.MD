@@ -1,7 +1,7 @@
 # FIAP - Faculdade de Informática e Administração Paulista
 
 <p align="center">
-<a href= "https://www.fiap.com.br/"><img src="assets/logo/logo-fiap.png" alt="FIAP - Faculdade de Informática e Admnistração Paulista" border="0" width=40% height=40%></a>
+<a href= "https://www.fiap.com.br/"><img src="assets/logo/logo-fiap.png" alt="FIAP - Faculdade de Informática e Administração Paulista" border="0" width=40% height=40%></a>
 </p>
 
 <br>
@@ -52,15 +52,15 @@ A base de dados foi analisada a partir do arquivo "crop_yield.csv", conforme exi
 
 ---
 
-## 📜 Descrição - entrega 2
+## 📜 Descrição - Entrega 2
 
 ---
 
-Nessa segunda entrega, foi solicitado uma estimativa de custo on-demand (sob demanda) de uma estrutura de Linux simples em núvem no servidor do AWS Calculator — ferramenta da Amazon Webservice que permite estimar custos de arquitetura em núvem.
+Nessa segunda entrega, foi solicitada uma estimativa de custo on-demand (sob demanda) de uma estrutura de Linux simples em nuvem no servidor do AWS Calculator — ferramenta da Amazon Web Services que permite estimar custos de arquitetura em nuvem.
 
 ## 1. Introdução
 
-Para a estimativa, foi necessário a configuração manual nas regiões solicitadas **(São Paulo - BR e Virgínia do Norte - EUA)** com base nos seguintes itens:
+Para a estimativa, foi necessária a configuração manual nas regiões solicitadas **(São Paulo - BR e Virgínia do Norte - EUA)** com base nos seguintes itens:
 
 - 2 CPUs
 - 1 GiB
@@ -71,39 +71,51 @@ Para a estimativa, foi necessário a configuração manual nas regiões solicita
 ## 2. Configurações
 
 **Serviço Utilizado:** EC2
-O EC2 oferece uma ótima performance e preço, atendento a área de treinamento de Machine Learning e, também, os itens solicitados conforme listados na introdução, além de possuir uma infraestrutura confiável e escalável on-demand (sob demanda).
+
+O EC2 oferece uma ótima performance e preço, atendendo a área de treinamento de Machine Learning e, também, os itens solicitados conforme listados na introdução, além de possuir uma infraestrutura confiável e escalável on-demand (sob demanda).
 
 **Locação:** Instância compartilhada
-O compartilhamento de instância utiliza uma estrutura física compartilhada entre diversos clientes da AWS, reduzindo significamente o custo. Como o objetivo do projeto é a hospedagem de uma API simples, não há a necessidade de um isolamento completo.
+
+O compartilhamento de instância utiliza uma estrutura física compartilhada entre diversos clientes da AWS, reduzindo significativamente o custo. Como o objetivo do projeto é a hospedagem de uma API simples, não há a necessidade de um isolamento completo.
 
 **Sistema Operacional:** Linux
+
 Escolhido conforme solicitado no projeto.
 
 **Carga de Trabalho:** Uso constante
-Como o intuito é a hospedagem em núvem que coletará os dados dos sensores da entrega 1 para uma futura Machine Learning, é necessária uma workload constante para o processamento continuo de dados de modo que traga previsões de rendimento mais exatas.
+
+Como o intuito é a hospedagem em nuvem que coletará os dados dos sensores da entrega 1 para uma futura Machine Learning, é necessária uma workload (carga de trabalho) constante para o processamento contínuo de dados de modo que traga previsões de rendimento mais exatas.
 
 **Número de Instâncias:** 1
+
 O fato de ser uma API simples, tira a necessidade de um maior número, pois uma única instância é suficiente para atender a demanda.
 
 **Tipo de Instância:** t4g.micro
-A instância t4g.micro atende os requisitos da introdução (2 CPUs, 1 Gib, até 5 GB de rede, ) e apresenta um baixo custo sob demanda. Portanto, se torna adequada para aplicações leves e simples.
+
+A instância t4g.micro atende aos requisitos da introdução (2 CPUs, 1 GiB, até 5 GB de rede, ) e apresenta um baixo custo sob demanda. Portanto, se torna adequada para aplicações leves e simples.
 
 **Opção de Pagamento:** On-demand
+
 Selecionado conforme solicitado no projeto. 
 
 **Armazenamento:** Amazon Elastic Block Store (Amazon EBS), SSD de uso geral (gp3), capacidade de 50 GB
+
 O EBS é onde ocorre o armazenamento dos bancos de dados e arquivos, nele foi utilizado o gp3 pois atende aplicações gerais e possui um bom equilíbrio entre desempenho e custo. E, conforme solicitado, foi configurado para uma capacidade de armazenamento de 50 GB.
 
 **Snapshots:** Não utilizado
+
 Como o objetivo é apenas estimar o custo da infraestrutura, não foi necessário o uso de snapshots de backup.
 
 **Monitoramento Detalhado:** Não utilizado
-A estimativa de uma API simples em núvem tira a necessidade de um monitoramento detalhado.
+
+A estimativa de uma API simples em nuvem tira a necessidade de um monitoramento detalhado.
 
 **Transferência de Dados:** Não utilizado
-Como não foi estipulado um valor de tráfego de rede, a tranferência de dados não foi considerada. 
+
+Como não foi estipulado um valor de tráfego de rede, a transferência de dados não foi considerada. 
 
 **Custos Adicionais:** Não utilizado
+
 O objetivo da análise foi calcular apenas o custo da infraestrutura principal necessária para hospedar a API.
 
 ## 3. Valores da Estimativa
@@ -122,7 +134,7 @@ Gráfico Representativo:
 
 ## 4. Conclusão
 
-A estimativa teve um custo anual de **330,12 USD** com um custo mensal de **17,38 USD** para São Paulo e **10,13 USD** para Vírginia do Norte, totalizando um custo geral mensal de **27,51 USD**. Sendo assim a região da Virgínia do Norte apresenta um custo **41,7%** inferior ao da região de São Paulo para a mesma configuração de infraestrutura. Contudo, mesmo que Virgínia do Norte possua um valor inferior, a região de São Paulo pode ser considerada melhor devido às restrições legais relacionadas à transferência internacional de dados e à necessidade de menor latência no acesso às informações coletadas pelos sensores.
+A estimativa teve um custo anual de **330,12 USD** com um custo mensal de **17,38 USD** para São Paulo e **10,13 USD** para Virgínia do Norte, totalizando um custo geral mensal de **27,51 USD**. Sendo assim, a região da Virgínia do Norte apresenta um custo **41,7%** inferior ao da região de São Paulo para a mesma configuração de infraestrutura. Contudo, mesmo que Virgínia do Norte possua um valor inferior, a região de São Paulo pode ser considerada melhor devido às restrições legais relacionadas à transferência internacional de dados e à necessidade de menor latência no acesso às informações coletadas pelos sensores.
 
 ---
 
