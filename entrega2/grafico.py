@@ -20,6 +20,6 @@ plt.ylabel("Custo mensal (USD)") #nome do y
 plt.margins(x=0.2)
 
 
-plt.savefig("assets/imagens_entrega2/grafico_custo.png", dpi=300) #salva como imagem
+plt.savefig("assets/imagens/grafico_custo.png", dpi=300) #salva como imagem
 plt.show() #mostra o grafico
 

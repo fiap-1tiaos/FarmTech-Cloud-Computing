@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550">
+  <!-- Background -->
+  <rect width="800" height="550" fill="#f5f5f5"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a472a">FarmTech Solutions - Arquitetura do Sistema IoT</text>
+  
+  <!-- ESP32 Box -->
+  <rect x="50" y="100" width="150" height="180" rx="10" fill="#2c3e50" stroke="#34495e" stroke-width="2"/>
+  <text x="125" y="130" text-anchor="middle" fill="white" font-size="14" font-weight="bold">ESP32</text>
+  <rect x="70" y="145" width="110" height="35" rx="5" fill="#e74c3c"/>
+  <text x="125" y="162" text-anchor="middle" fill="white" font-size="10">DHT11</text>
+  <text x="125" y="172" text-anchor="middle" fill="white" font-size="8">(Temp + Umidade)</text>
+  <rect x="70" y="185" width="110" height="35" rx="5" fill="#f39c12"/>
+  <text x="125" y="202" text-anchor="middle" fill="white" font-size="10">LDR</text>
+  <text x="125" y="212" text-anchor="middle" fill="white" font-size="8">(Luminosidade)</text>
+  <rect x="70" y="225" width="110" height="25" rx="5" fill="#3498db"/>
+  <text x="125" y="242" text-anchor="middle" fill="white" font-size="10">Wi-Fi</text>
+  
+  <!-- WiFi Symbol -->
+  <path d="M200 170 Q230 140 260 170" stroke="#3498db" stroke-width="3" fill="none"/>
+  <path d="M210 180 Q230 160 250 180" stroke="#3498db" stroke-width="3" fill="none"/>
+  <path d="M220 190 Q230 175 240 190" stroke="#3498db" stroke-width="3" fill="none"/>
+  <text x="230" y="210" text-anchor="middle" fill="#3498db" font-size="10">Wi-Fi</text>
+  <line x1="200" y1="190" x2="260" y2="190" stroke="#3498db" stroke-width="2" stroke-dasharray="5,3"/>
+  
+  <!-- MQTT Broker -->
+  <rect x="300" y="100" width="180" height="180" rx="10" fill="#8e44ad" stroke="#9b59b6" stroke-width="2"/>
+  <text x="390" y="130" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Broker MQTT</text>
+  <text x="390" y="155" text-anchor="middle" fill="white" font-size="12">HiveMQ</text>
+  <text x="390" y="175" text-anchor="middle" fill="#d5c6e8" font-size="10">broker.hivemq.com</text>
+  <text x="390" y="190" text-anchor="middle" fill="#d5c6e8" font-size="10">Porta: 1883</text>
+  <rect x="320" y="207" width="140" height="40" rx="5" fill="#9b59b6" stroke="white" stroke-width="1"/>
+  <text x="390" y="225" text-anchor="middle" fill="white" font-size="10">Tópico:</text>
+  <text x="390" y="238" text-anchor="middle" fill="white" font-size="9">farmtech/sensores</text>
+  
+  <!-- Arrow to Server -->
+  <line x1="490" y1="190" x2="515" y2="190" stroke="#27ae60" stroke-width="3"/>
+  <polygon points="515,185 525,190 515,195" fill="#27ae60"/>
+  <text x="507" y="210" text-anchor="middle" fill="#27ae60" font-size="9">MQTT</text>
+  
+  <!-- Python Server -->
+  <rect x="540" y="100" width="150" height="180" rx="10" fill="#27ae60" stroke="#2ecc71" stroke-width="2"/>
+  <text x="615" y="130" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Servidor</text>
+  <text x="615" y="155" text-anchor="middle" fill="white" font-size="12">Python + Flask</text>
+  <rect x="560" y="165" width="110" height="25" rx="5" fill="#2ecc71"/>
+  <text x="615" y="182" text-anchor="middle" fill="white" font-size="10">Dashboard IoT</text>
+  <text x="615" y="205" text-anchor="middle" fill="#d5f4e3" font-size="10">Porta: 5000</text>
+  <text x="615" y="225" text-anchor="middle" fill="#d5f4e3" font-size="10">localhost:5000</text>
+  
+  <!-- Arrow to Browser -->
+  <line x1="615" y1="280" x2="615" y2="320" stroke="#e67e22" stroke-width="3"/>
+  <polygon points="610,315 615,325 620,315" fill="#e67e22"/>
+  <text x="635" y="305" text-anchor="middle" fill="#e67e22" font-size="9">HTTP</text>
+  
+  <!-- Dashboard Browser -->
+  <rect x="500" y="340" width="230" height="120" rx="10" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2"/>
+  <text x="615" y="365" text-anchor="middle" fill="#2c3e50" font-size="14" font-weight="bold">Dashboard Web</text>
+  <circle cx="550" cy="390" r="15" fill="#e74c3c"/>
+  <text x="550" y="395" text-anchor="middle" fill="white" font-size="12">25°C</text>
+  <circle cx="615" cy="390" r="15" fill="#3498db"/>
+  <text x="615" y="395" text-anchor="middle" fill="white" font-size="12">60%</text>
+  <circle cx="680" cy="390" r="15" fill="#f39c12"/>
+  <text x="680" y="395" text-anchor="middle" fill="white" font-size="10">512</text>
+  <text x="615" y="440" text-anchor="middle" fill="#7f8c8d" font-size="10">Navegador Web</text>
+  
+  <!-- ngrok Box -->
+  <rect x="50" y="340" width="200" height="100" rx="10" fill="#2c3e50" stroke="#34495e" stroke-width="2"/>
+  <text x="150" y="365" text-anchor="middle" fill="white" font-size="14" font-weight="bold">ngrok</text>
+  <text x="150" y="385" text-anchor="middle" fill="#bdc3c7" font-size="10">Túnel para Internet</text>
+  <text x="150" y="405" text-anchor="middle" fill="#bdc3c7" font-size="9">ngrok http 5000</text>
+  <text x="150" y="420" text-anchor="middle" fill="#2ecc71" font-size="9">URL pública</text>
+  
+  <!-- Arrow from ngrok -->
+  <line x1="250" y1="390" x2="484" y2="390" stroke="#3498db" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="485,385 495,390 485,395" fill="#3498db"/>
+  
+  <!-- Farm/Sensors Image -->
+  <rect x="50" y="450" width="700" height="35" rx="5" fill="#1a472a"/>
+  <text x="400" y="472" text-anchor="middle" fill="white" font-size="12">Smart Farm - Coleta de Dados Agrícolas em Tempo Real</text>
+  
+  <!-- Legend -->
+  <rect x="540" y="490" width="230" height="25" rx="5" fill="#ecf0f1" stroke="#bdc3c7"/>
+  <circle cx="555" cy="507" r="5" fill="#e74c3c"/>
+  <text x="565" y="509" fill="#2c3e50" font-size="9">Temp</text>
+  <circle cx="600" cy="507" r="5" fill="#3498db"/>
+  <text x="607" y="509" fill="#2c3e50" font-size="9">Umidade</text>
+  <circle cx="650" cy="507" r="5" fill="#f39c12"/>
+  <text x="660" y="509" fill="#2c3e50" font-size="9">Luminosidade</text>
+</svg>
