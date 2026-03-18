@@ -21,7 +21,7 @@
 
 - <a href="https://youtu.be/lI096I3a-KI"> Execução e dados - Jupyter Notebook</a>
 - <a href="https://youtu.be/IwPJJlkNaDY?si=h9mY4XDt-yoDEiHJ"> Estimativa AWS Calculator</a>
-- - <a href="https://youtu.be/IwPJJlkNaDY?si=h9mY4XDt-yoDEiHJ"> Ir Além - Sistema de Coleta e Comunicação de Dados Usando ESP32 Integrado ao Wi-Fi</a>
+- <a href="https://youtu.be/tN_2lrPw9Hg"> Ir Além - Sistema de Coleta e Comunicação de Dados Usando ESP32 Integrado ao Wi-Fi</a>
 
 ## 👩‍🏫 Professores:
 ### Tutor(a) 
